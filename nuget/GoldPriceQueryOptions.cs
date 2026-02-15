@@ -11,8 +11,7 @@ namespace APIVerve.API.GoldPrice
     public class GoldPriceQueryOptions
     {
         /// <summary>
-        /// The currency to get the price in (USD, EUR, GBP, etc.)
-        /// Example: USD
+        /// The currency to get the price in
         /// </summary>
         [JsonProperty("currency")]
         public string Currency { get; set; }
