@@ -31,6 +31,13 @@ paths:
           required: false
           description: The currency to get the price in
           example: USD
+        - name: hourly
+          in: query
+          schema:
+            type: boolean
+          required: false
+          description: Include hourly price data for the past 24 hours
+          example: true
       responses:
         '200':
           description: Successful Response
@@ -57,6 +64,17 @@ paths:
                   kilogram: 152101.49
                   ounce: 4312
                   lastUpdated: '2026-02-07T12:00:00.000Z'
+                  change24h: 28.5
+                  change24hPct: 0.67
+                  changeDirection: up
+                  high24h: 4325
+                  low24h: 4278.5
+                  formatted:
+                    ounce: $4,312.00
+                    gram: $152.10
+                    kilogram: $152,101.49
+                    ounceWords: four thousand three hundred twelve dollars
+                    kilogramWords: one hundred fifty-two thousand one hundred one dollars
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
