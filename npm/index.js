@@ -30,7 +30,7 @@ class goldpriceWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/goldprice';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"currency":{"type":"string","required":false,"default":"USD"}};
+        this.validationRules = {"currency":{"type":"string","required":false,"default":"USD"},"hourly":{"type":"boolean","required":false,"default":false}};
     }
 
     /**
