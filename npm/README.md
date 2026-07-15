@@ -60,7 +60,8 @@ Using the API is simple. All you have to do is make a request. The API will retu
 
 ```javascript
 var query = {
-  currency: "USD"
+  currency: "USD",
+  hourly: false
 };
 
 api.execute(query, function (error, data) {
@@ -80,7 +81,8 @@ You can also use promises to make requests. The API returns a promise that you c
 
 ```javascript
 var query = {
-  currency: "USD"
+  currency: "USD",
+  hourly: false
 };
 
 api.execute(query)
@@ -101,7 +103,8 @@ You can also use async/await to make requests. The API returns a promise that yo
 ```javascript
 async function makeRequest() {
     var query = {
-  currency: "USD"
+  currency: "USD",
+  hourly: false
 };
 
     try {
@@ -123,10 +126,22 @@ async function makeRequest() {
   "error": null,
   "data": {
     "currency": "USD",
-    "gram": 103.71,
-    "kilogram": 103705.56,
-    "ounce": 2940,
-    "lastUpdated": 1740074702
+    "gram": 152.1,
+    "kilogram": 152101.49,
+    "ounce": 4312,
+    "lastUpdated": "2026-02-07T12:00:00.000Z",
+    "change24h": 28.5,
+    "change24hPct": 0.67,
+    "changeDirection": "up",
+    "high24h": 4325,
+    "low24h": 4278.5,
+    "formatted": {
+      "ounce": "$4,312.00",
+      "gram": "$152.10",
+      "kilogram": "$152,101.49",
+      "ounceWords": "four thousand three hundred twelve dollars",
+      "kilogramWords": "one hundred fifty-two thousand one hundred one dollars"
+    }
   }
 }
 ```
