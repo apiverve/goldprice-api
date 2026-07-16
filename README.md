@@ -187,11 +187,44 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Gold Price API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "currency": "USD",
+    "gram": 152.1,
+    "kilogram": 152101.49,
+    "ounce": 4312,
+    "lastUpdated": "2026-02-07T12:00:00.000Z",
+    "change24h": 28.5,
+    "change24hPct": 0.67,
+    "changeDirection": "up",
+    "high24h": 4325,
+    "low24h": 4278.5,
+    "formatted": {
+      "ounce": "$4,312.00",
+      "gram": "$152.10",
+      "kilogram": "$152,101.49",
+      "ounceWords": "four thousand three hundred twelve dollars",
+      "kilogramWords": "one hundred fifty-two thousand one hundred one dollars"
+    }
+  }
 }
 ```
 
