@@ -68,7 +68,10 @@ namespace APIVerve.API.GoldPrice
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
             { "currency", new ValidationRule { Type = "string", Required = false } },
-            { "hourly", new ValidationRule { Type = "boolean", Required = false } }
+            { "hourly", new ValidationRule { Type = "boolean", Required = false } },
+            { "hourly[].hour", new ValidationRule { Type = "number", Required = false } },
+            { "hourly[].price", new ValidationRule { Type = "number", Required = false } },
+            { "hourly[].timestamp", new ValidationRule { Type = "string", Required = false } }
         };
 
         /// <summary>Format validation patterns</summary>
