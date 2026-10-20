@@ -1,13 +1,13 @@
-# [Gold Price API](https://goldprice.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Gold Price API](https://apiverve.com/marketplace/goldprice?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Gold Price is a simple tool for getting the current price of gold. It returns the current price of gold in any currency and in various units.
+Gold Price fetches real-time spot gold prices per troy ounce, gram, and kilogram. Each response includes the price update timestamp, 24-hour price change, and market direction, while paid plans add custom currencies and hourly history.
 
 The Gold Price API provides a simple, reliable way to integrate gold price functionality into your applications. Built for developers who need production-ready gold price capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://goldprice.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/goldprice?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://goldprice.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/goldprice?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -157,7 +157,7 @@ go get github.com/apiverve/goldprice-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Gold Price API](https://goldprice.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Gold Price API](https://apiverve.com/marketplace/goldprice?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/goldprice](https://docs.apiverve.com/ref/goldprice)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -208,8 +208,8 @@ A real response from the Gold Price API:
   "error": null,
   "data": {
     "currency": "USD",
-    "gram": 152.1,
-    "kilogram": 152101.49,
+    "gram": 138.63,
+    "kilogram": 138633.92,
     "ounce": 4312,
     "lastUpdated": "2026-02-07T12:00:00.000Z",
     "change24h": 28.5,
@@ -219,10 +219,10 @@ A real response from the Gold Price API:
     "low24h": 4278.5,
     "formatted": {
       "ounce": "$4,312.00",
-      "gram": "$152.10",
-      "kilogram": "$152,101.49",
-      "ounceWords": "four thousand three hundred twelve dollars",
-      "kilogramWords": "one hundred fifty-two thousand one hundred one dollars"
+      "gram": "$138.63",
+      "kilogram": "$138,633.92",
+      "ounceWords": "four thousand, three hundred twelve dollars",
+      "kilogramWords": "one hundred thirty-eight thousand, six hundred thirty-four dollars"
     }
   }
 }
@@ -232,7 +232,7 @@ A real response from the Gold Price API:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Gold Price API](https://goldprice.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Gold Price API](https://apiverve.com/marketplace/goldprice?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
