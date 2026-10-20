@@ -1,6 +1,6 @@
 import re
-from typing import Dict, Optional, Any
-from dataclasses import dataclass, List
+from typing import Dict, Optional, Any, List
+from dataclasses import dataclass
 import requests
 
 
@@ -24,7 +24,11 @@ class ValidationError(GoldpriceAPIClientError):
 class GoldpriceAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
-        "currency": {"type": "string", "required": False, "default": "USD"}
+        "currency": {"type": "string", "required": False, "default": "USD"},
+        "hourly": {"type": "boolean", "required": False, "default": False},
+        "hourly[].hour": {"type": "number", "required": False},
+        "hourly[].price": {"type": "number", "required": False},
+        "hourly[].timestamp": {"type": "string", "required": False}
     }
 
     # Format validation patterns
