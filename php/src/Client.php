@@ -15,11 +15,11 @@ use APIVerve\Goldprice\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute(['currency' => 'USD', 'hourly' => true]);
+ * $response = $client->execute(['currency' => 'USD', 'hourly' => true, 'hourly[].hour' => 0, 'hourly[].price' => 0, 'hourly[].timestamp' => '']);
  * print_r($response);
  * ```
  *
- * @see https://goldprice.apiverve.com?utm_source=php&utm_medium=readme
+ * @see https://apiverve.com/marketplace/goldprice?utm_source=php&utm_medium=referral&utm_content=readme
  */
 class Client
 {
@@ -35,7 +35,10 @@ class Client
      */
     private const VALIDATION_RULES = [
         'currency' => ['type' => 'string', 'required' => false],
-        'hourly' => ['type' => 'boolean', 'required' => false]
+        'hourly' => ['type' => 'boolean', 'required' => false],
+        'hourly[].hour' => ['type' => 'number', 'required' => false],
+        'hourly[].price' => ['type' => 'number', 'required' => false],
+        'hourly[].timestamp' => ['type' => 'string', 'required' => false]
     ];
 
     /**

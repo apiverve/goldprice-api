@@ -1,6 +1,6 @@
 # Gold Price API - PHP Package
 
-Gold Price is a simple tool for getting the current price of gold. It returns the current price of gold in any currency and in various units.
+Gold Price fetches real-time spot gold prices per troy ounce, gram, and kilogram. Each response includes the price update timestamp, 24-hour price change, and market direction, while paid plans add custom currencies and hourly history.
 
 ## Installation
 
@@ -29,7 +29,10 @@ $client = new Client('YOUR_API_KEY');
 // Make a request
 $response = $client->execute([
     'currency' => 'USD',
-    'hourly' => true
+    'hourly' => true,
+    'hourly[].hour' => 0,
+    'hourly[].price' => 0,
+    'hourly[].timestamp' => ''
 ]);
 
 // Print the response
@@ -45,7 +48,7 @@ use APIVerve\Goldprice\Exceptions\APIException;
 use APIVerve\Goldprice\Exceptions\ValidationException;
 
 try {
-    $response = $client->execute(['currency' => 'USD', 'hourly' => true]);
+    $response = $client->execute(['currency' => 'USD', 'hourly' => true, 'hourly[].hour' => 0, 'hourly[].price' => 0, 'hourly[].timestamp' => '']);
     print_r($response['data']);
 } catch (ValidationException $e) {
     echo "Validation error: " . implode(', ', $e->getErrors());
@@ -73,8 +76,8 @@ $client = new Client(
   "error": null,
   "data": {
     "currency": "USD",
-    "gram": 152.1,
-    "kilogram": 152101.49,
+    "gram": 138.63,
+    "kilogram": 138633.92,
     "ounce": 4312,
     "lastUpdated": "2026-02-07T12:00:00.000Z",
     "change24h": 28.5,
@@ -84,10 +87,10 @@ $client = new Client(
     "low24h": 4278.5,
     "formatted": {
       "ounce": "$4,312.00",
-      "gram": "$152.10",
-      "kilogram": "$152,101.49",
-      "ounceWords": "four thousand three hundred twelve dollars",
-      "kilogramWords": "one hundred fifty-two thousand one hundred one dollars"
+      "gram": "$138.63",
+      "kilogram": "$138,633.92",
+      "ounceWords": "four thousand, three hundred twelve dollars",
+      "kilogramWords": "one hundred thirty-eight thousand, six hundred thirty-four dollars"
     }
   }
 }
@@ -100,11 +103,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/goldprice?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/goldprice?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://goldprice.apiverve.com?utm_source=php&utm_medium=readme](https://goldprice.apiverve.com?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/goldprice?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/goldprice?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
