@@ -26,9 +26,7 @@ class GoldpriceAPIClient:
     VALIDATION_RULES = {
         "currency": {"type": "string", "required": False, "default": "USD"},
         "hourly": {"type": "boolean", "required": False, "default": False},
-        "hourly[].hour": {"type": "number", "required": False},
-        "hourly[].price": {"type": "number", "required": False},
-        "hourly[].timestamp": {"type": "string", "required": False}
+        "daily": {"type": "boolean", "required": False, "default": False}
     }
 
     # Format validation patterns
