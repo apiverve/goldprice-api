@@ -69,9 +69,7 @@ namespace APIVerve.API.GoldPrice
         {
             { "currency", new ValidationRule { Type = "string", Required = false } },
             { "hourly", new ValidationRule { Type = "boolean", Required = false } },
-            { "hourly[].hour", new ValidationRule { Type = "number", Required = false } },
-            { "hourly[].price", new ValidationRule { Type = "number", Required = false } },
-            { "hourly[].timestamp", new ValidationRule { Type = "string", Required = false } }
+            { "daily", new ValidationRule { Type = "boolean", Required = false } }
         };
 
         /// <summary>Format validation patterns</summary>
