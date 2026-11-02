@@ -17,9 +17,7 @@ const api = new goldpriceAPI({
 var query = {
   currency: "USD",
   hourly: false,
-  hourly[].hour: 0,
-  hourly[].price: 0,
-  hourly[].timestamp: ""
+  daily: false
 };
 
 // Make the API request using callback

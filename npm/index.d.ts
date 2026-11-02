@@ -35,7 +35,23 @@ declare module '@apiverve/goldprice' {
       changeDirection: null | string;
       high24H:         number | null;
       low24H:          number | null;
+      change7D:        number | null;
+      change7DPct:     number | null;
+      change30D:       number | null;
+      change30DPct:    number | null;
+      high30D:         number | null;
+      low30D:          number | null;
+      average30D:      number | null;
+      volatility30D:   number | null;
+      daily:           Daily[];
+      marketStatus:    null | string;
+      karatGram:       { [key: string]: number | null };
       formatted:       Formatted;
+  }
+  
+  interface Daily {
+      date:  Date | null;
+      price: number | null;
   }
   
   interface Formatted {
