@@ -1,6 +1,6 @@
 name: apiverve_goldprice
 description: "Gold Price fetches real-time spot gold prices per troy ounce, gram, and kilogram. Each response includes the update timestamp, 24-hour price change, and market direction, while paid plans add custom currencies, karat prices, 7- and 30-day changes, 30-day stats, and hourly and daily history."
-version: 1.2.4
+version: 1.2.5
 homepage: https://apiverve.com/marketplace/goldprice?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/goldprice-api/tree/main/dart
 
